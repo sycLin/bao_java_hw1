@@ -24,6 +24,40 @@ public class HugeInteger {
 	//     remainder
 	public static void main(String argv[]) {
 		System.out.println("This is a HugeInteger class which can hold an integer with up to 40 digits.");
+		// the following code demonstrates the member methods
+		HugeInteger h1 = new HugeInteger();
+		HugeInteger h2 = new HugeInteger();
+		// demo parse()
+		h1.parse("123456789009876543211234567890");
+		h2.parse("123456789009876543211234567890");
+		System.out.println("Two HugeInteger instances created and they parsed the same string:");
+		// demo toString()
+		System.out.println("h1 = " + h1);
+		System.out.println("h2 = " + h2);
+		// demo isEqualTo()
+		System.out.printf("Are they equal to each other? %b\n", h1.isEqualTo(h2));
+		// demo add()
+		h1.add(h2);
+		System.out.println("After add h2 to h1:");
+		System.out.println("h1 = " + h1);
+		System.out.println("h2 = " + h2);
+		// demo isGreaterThan()
+		System.out.printf("Is h1 larger than h2? %b\n", h1.isGreaterThan(h2));
+		// demo subtract()
+		h1.subtract(h2);
+		System.out.println("After subtract h2 from h1:");
+		System.out.println("h1 = " + h1);
+		System.out.println("h2 = " + h2);
+		// demo isLessThanOrEqualTo()
+		System.out.printf("Is h1 <= h2? %b\n", h1.isLessThanOrEqualTo(h2));
+		// demo subtract() again
+		h1.subtract(h2);
+		System.out.println("Subtract h2 from h1 again:");
+		System.out.println("h1 = " + h1);
+		System.out.println("h2 = " + h2);
+		// demo isLessThan() and isZero()
+		System.out.printf("Is h1 less than h2? %b\n", h1.isLessThan(h2));
+		System.out.printf("Is h1 zero? %b\n", h1.isZero());
 	}
 
 	// constructor
